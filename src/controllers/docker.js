@@ -547,6 +547,12 @@ class Docker {
                                 Type: 'bind',
                                 ReadOnly: true,
                             },
+                            {
+                                Target: '/home/logfiles',
+                                Source: '/srv/daemon-data,
+                                Type: 'bind',
+                                ReadOnly: true,
+                            },
                         ],
                         Tmpfs: {
                             '/tmp': Config.get('docker.policy.container.tmpfs', 'rw,exec,nosuid,size=50M'),
